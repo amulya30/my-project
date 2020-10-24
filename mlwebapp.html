@@ -1,6 +1,37 @@
 <html>
 <head>
+<style>
+    input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
 </head>
 <body>
     <script >
@@ -27,6 +58,7 @@
             xhttp.send();
         }    
     </script>
+    <div>
     <h1>Generating Histograms for Numeric Columns</h1>
     <img src="/Plots/hist_Survived.png">
     <img src="/Plots/hist_Pclass.png">
@@ -34,22 +66,38 @@
     <img src="/Plots/hist_SibSp.png">
     <img src="/Plots/hist_Parch.png">
     <img src="/Plots/hist_Fare.png">
-    <h1>Studying The Correlation Of The Columns Using Scatter Plots</h1>
+    <h1>#Studying The Correlation Of The Columns Using Scatter Plots</h1>
     <img src="/Plots/scatterMatrix.png" style="max-width: 100%; max-height: fit-content;">
-    <h1>Plotting Categorical Data Against Frequency</h1>
+    <h1>#Plotting Categorical Data Against Frequency</h1>
     <img src="/Plots/categoricalFrequency.png">
-    <h1>Prediction</h1>
+    <h1>#Prediction</h1>
     <form action="/prediction" method="GET" id="mlForm">
+        
+        <label for="Passenger Id">Passenger ID:</label>
         <input type="number" placeholder="Enter Passenger ID" name="passengerID"><br>
+        
+        <label for="PClass">PClass:</label>
         <input type="number" placeholder="Enter PClass" name="pclass"><br>
+        
+        <label for="Gender">Gender:</label>
         <select name="gender" >
             <option value="male">Male</option>
             <option value="female">Female</option>
         </select><br>
+        
+        <label for="Age">Age:</label>
         <input type="number" placeholder="Age" name="age"><br>
+        
+        <label for="Sibsp">Sibsp:</label>
         <input type="number" placeholder="Enter SibSp" name="sibSp"><br>
+        
+        <label for="Parch">Parch:</label>
         <input type="number" placeholder="Enter Parch" name="parch"><br>
+        
+        <label for="Fare">Fare:</label>
         <input type="number" placeholder="Enter Fare" name="fare"><br>
+        
+        <label for="embarked">Embarked Category:</label>
         <select name="embarked">
             <option value="S">S</option>
             <option value="C">C</option>
@@ -57,5 +105,6 @@
         </select>  <br>
         <input type="button" value="Predict" onclick="sendRequest()">
     </form>
+    </div>
 </body>
 </html>
