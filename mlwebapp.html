@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=button] {
   width: 100%;
   background-color: #4CAF50;
   color: white;
@@ -22,7 +22,7 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type=button]:hover {
   background-color: #45a049;
 }
 
@@ -58,7 +58,7 @@ div {
             xhttp.send();
         }    
     </script>
-    <div>
+    
     <h1>Generating Histograms for Numeric Columns</h1>
     <img src="/Plots/hist_Survived.png">
     <img src="/Plots/hist_Pclass.png">
@@ -70,6 +70,7 @@ div {
     <img src="/Plots/scatterMatrix.png" style="max-width: 100%; max-height: fit-content;">
     <h1>#Plotting Categorical Data Against Frequency</h1>
     <img src="/Plots/categoricalFrequency.png">
+    <div>
     <h1>#Prediction</h1>
     <form action="/prediction" method="GET" id="mlForm">
         
@@ -102,7 +103,7 @@ div {
             <option value="S">S</option>
             <option value="C">C</option>
             <option value="Q">Q</option>
-        </select>  <br>
+        </select><br>
         <input type="button" value="Predict" onclick="sendRequest()">
     </form>
     </div>
