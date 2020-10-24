@@ -1,0 +1,30 @@
+{
+  "name": "webapptest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amulya30/my-project.git"
+  },
+  "keywords": [
+    "ML",
+    "WebApp",
+    "Python",
+    "Node.js",
+    "ExpressJs"
+  ],
+  "author": "amulya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amulya30/my-project/issues"
+  },
+  "homepage": "https://github.com/amulya30/my-project#readme"
+}
